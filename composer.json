@@ -1,5 +1,5 @@
 {
-    "name": "shortlist-digital/event-intro-callout-widget-plugin",
+    "name": "shortlist-digital/agreable-event-intro-callout-widget-plugin",
     "description": "A plugin to add an event intro callout widget",
     "type": "wordpress-plugin",
     "license": "MIT",
@@ -12,7 +12,7 @@
     "minimum-stability": "dev",
     "autoload": {
         "psr-4": {
-            "EventIntroCalloutWidgetPlugin\\": "app/"
+            "AgreableEventIntroCalloutWidgetPlugin\\": "app/"
         }
     },
     "require": {}
