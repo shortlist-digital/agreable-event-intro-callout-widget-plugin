@@ -1,43 +1,43 @@
 <?php
-$key = "event_intro_callout";
+$key = "widget_event_intro_callout";
 
 $widgetplacement = self::$config['tab_placement'];
 
 $widget_config = array (
-  'key' => 'widget_' . $key,
-  'name' => $key,
+  'key' => $key,
+  'name' => 'event_intro_callout',
   'label' => 'Event Intro Callout',
   'display' => 'row',
   'sub_fields' => array (
     array (
-      'key' => 'widget_' . $key . '_basic_details_tab',
+      'key' => $key . '_basic_details_tab',
       'label' => 'Basic Details',
       'type' => 'tab',
       'placement' => $widgetplacement,
     ),
     array (
-      'key' => 'widget_' . $key . '_callout',
+      'key' => $key . '_callout',
       'label' => 'Callout',
       'name' => 'callout',
       'type' => 'text',
       'required' => 1,
     ),
     array (
-      'key' => 'widget_' . $key . '_title',
+      'key' => $key . '_title',
       'label' => 'Title',
       'name' => 'title',
       'type' => 'text',
       'required' => 1,
     ),
     array (
-      'key' => 'widget_' . $key . '_sell',
+      'key' => $key . '_sell',
       'label' => 'Sell',
       'name' => 'sell',
       'type' => 'strict_wysiwyg',
       'required' => 1,
     ),
     array (
-      'key' => 'widget_' . $key . '_advanced_details_tab',
+      'key' => $key . '_advanced_details_tab',
       'label' => 'Advanced Details',
       'type' => 'tab',
       'placement' => $widgetplacement,
@@ -45,5 +45,6 @@ $widget_config = array (
   )
 );
 
-$widget_config["content-types"] = array('page', 'category');
+$widget_config["content-types"] = get_option("options_" . $key . "_available_post_types");
+
 $widget_config["content-sizes"] = array('main');
